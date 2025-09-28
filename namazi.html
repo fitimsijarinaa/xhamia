@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="sq">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kohët e Namazit - Xhamia Ebu Beker Es-Siddik</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/jpg" href="./assets/logo.jpg" />
+  </head>
+  <body class="bg-white text-gray-800">
+    <!-- 🌙 Header Navigation -->
+    <header class="bg-white shadow fixed w-full z-50">
+      <div
+        class="container mx-auto flex items-center justify-between px-6 py-4"
+      >
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-2">
+          <img src="./assets/logo.jpg" alt="Logo" class="h-10 w-auto" />
+          <span class="text-xl font-bold text-[#C49A3A]"
+            >Xhamia Ebu Beker Es-Siddik</span
+          >
+        </a>
+
+        <!-- Navigation -->
+        <nav class="hidden md:flex space-x-6 font-medium">
+          <a href="index.html" class="hover:text-[#009C9C]">Kreu</a>
+          <a href="rreth-nesh.html" class="hover:text-[#009C9C]">Rreth nesh</a>
+          <a href="aktivitetet.html" class="hover:text-[#009C9C]"
+            >Aktivitetet</a
+          >
+          <a href="namazi.html" class="text-[#C49A3A] hover:text-[#009C9C]"
+            >Kohët e namazit</a
+          >
+          <a href="eventet.html" class="hover:text-[#009C9C]">Eventet</a>
+          <a href="galeria.html" class="hover:text-[#009C9C]">Galeria</a>
+          <a href="dhurime.html" class="hover:text-[#009C9C]">Dhurime</a>
+          <a href="kontakt.html" class="hover:text-[#009C9C]">Kontakt</a>
+        </nav>
+
+        <!-- Language Switch -->
+        <div class="hidden md:flex items-center space-x-2">
+          <a
+            href="#"
+            class="px-2 py-1 border border-[#C49A3A] rounded hover:bg-[#C49A3A] hover:text-white"
+            >🇦🇱</a
+          >
+          <a
+            href="#"
+            class="px-2 py-1 border border-[#C49A3A] rounded hover:bg-[#C49A3A] hover:text-white"
+            >🇩🇪</a
+          >
+          <a
+            href="#"
+            class="px-2 py-1 border border-[#C49A3A] rounded hover:bg-[#C49A3A] hover:text-white"
+            >🇦🇪</a
+          >
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="menuBtn"
+          class="md:hidden text-[#C49A3A] focus:outline-none"
+        >
+          ☰
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden bg-white border-t border-gray-200 px-6 pb-4"
+      >
+        <nav class="flex flex-col space-y-3">
+          <a href="index.html">Kreu</a>
+          <a href="rreth-nesh.html">Rreth nesh</a>
+          <a href="aktivitetet.html">Aktivitetet</a>
+          <a href="namazi.html" class="text-[#C49A3A]">Kohët e namazit</a>
+          <a href="eventet.html">Eventet</a>
+          <a href="galeria.html">Galeria</a>
+          <a href="dhurime.html">Dhurime</a>
+          <a href="kontakt.html">Kontakt</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- 🕌 Hero Section -->
+    <section
+      class="relative h-96 flex items-center justify-center bg-gradient-to-r from-[#C49A3A] to-[#009C9C]"
+    >
+      <div class="text-center text-white px-6">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Kohët e Namazit</h1>
+        <p class="text-lg md:text-xl max-w-2xl mx-auto">
+          Orari i saktë i namazeve për Prishtinën dhe rrethinë
+        </p>
+      </div>
+    </section>
+
+    <!-- ⏰ Kohët e sotme -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-[#C49A3A] mb-4">
+            Kohët e namazit sot
+          </h2>
+          <p class="text-lg text-gray-600" id="currentDate">
+            <!-- Data do të shfaqet këtu me JavaScript -->
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-5 gap-6 max-w-6xl mx-auto">
+          <!-- Sabahu -->
+          <div
+            class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 text-center shadow-lg"
+          >
+            <div
+              class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <span class="text-white text-2xl">🌅</span>
+            </div>
+            <h3 class="text-xl font-bold text-blue-700 mb-2">Sabahu</h3>
+            <p class="text-2xl font-bold text-blue-800" id="fajr-time">05:30</p>
+            <p class="text-sm text-blue-600 mt-2">Namazi i mëngjesit</p>
+          </div>
+
+          <!-- Dreka -->
+          <div
+            class="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-lg p-6 text-center shadow-lg"
+          >
+            <div
+              class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <span class="text-white text-2xl">☀️</span>
+            </div>
+            <h3 class="text-xl font-bold text-yellow-700 mb-2">Dreka</h3>
+            <p class="text-2xl font-bold text-yellow-800" id="dhuhr-time">
+              12:45
+            </p>
+            <p class="text-sm text-yellow-600 mt-2">Namazi i drekës</p>
+          </div>
+
+          <!-- Ikindia -->
+          <div
+            class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-6 text-center shadow-lg"
+          >
+            <div
+              class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <span class="text-white text-2xl">🌤️</span>
+            </div>
+            <h3 class="text-xl font-bold text-orange-700 mb-2">Ikindia</h3>
+            <p class="text-2xl font-bold text-orange-800" id="asr-time">
+              15:20
+            </p>
+            <p class="text-sm text-orange-600 mt-2">Namazi i pasdites</p>
+          </div>
+
+          <!-- Akshami -->
+          <div
+            class="bg-gradient-to-br from-red-50 to-red-100 rounded-lg p-6 text-center shadow-lg"
+          >
+            <div
+              class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <span class="text-white text-2xl">🌅</span>
+            </div>
+            <h3 class="text-xl font-bold text-red-700 mb-2">Akshami</h3>
+            <p class="text-2xl font-bold text-red-800" id="maghrib-time">
+              17:45
+            </p>
+            <p class="text-sm text-red-600 mt-2">Namazi i mbrëmjes</p>
+          </div>
+
+          <!-- Jacia -->
+          <div
+            class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-6 text-center shadow-lg"
+          >
+            <div
+              class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <span class="text-white text-2xl">🌙</span>
+            </div>
+            <h3 class="text-xl font-bold text-purple-700 mb-2">Jacia</h3>
+            <p class="text-2xl font-bold text-purple-800" id="isha-time">
+              19:15
+            </p>
+            <p class="text-sm text-purple-600 mt-2">Namazi i natës</p>
+          </div>
+        </div>
+
+        <!-- Namazi i Xhumasë -->
+        <div class="mt-12 text-center">
+          <div class="bg-[#C49A3A] text-white rounded-lg p-6 max-w-md mx-auto">
+            <h3 class="text-2xl font-bold mb-2">🕌 Namazi i Xhumasë</h3>
+            <p class="text-3xl font-bold mb-2">13:00</p>
+            <p class="text-sm opacity-90">Çdo të premte</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 📅 Kalendari mujor -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-[#C49A3A] mb-4">
+            Kalendari mujor i namazeve
+          </h2>
+          <p class="text-lg text-gray-600">
+            Kohët e namazeve për muajin aktual - Prishtinë, Kosovë
+          </p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="bg-[#C49A3A] text-white p-4">
+            <h3 class="text-xl font-bold text-center">Janar 2025</h3>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full">
+              <thead class="bg-gray-100">
+                <tr>
+                  <th class="px-4 py-3 text-left font-semibold">Data</th>
+                  <th class="px-4 py-3 text-center font-semibold">Sabahu</th>
+                  <th class="px-4 py-3 text-center font-semibold">Dreka</th>
+                  <th class="px-4 py-3 text-center font-semibold">Ikindia</th>
+                  <th class="px-4 py-3 text-center font-semibold">Akshami</th>
+                  <th class="px-4 py-3 text-center font-semibold">Jacia</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr class="hover:bg-gray-50">
+                  <td class="px-4 py-3 font-medium">1 Janar</td>
+                  <td class="px-4 py-3 text-center">05:30</td>
+                  <td class="px-4 py-3 text-center">12:45</td>
+                  <td class="px-4 py-3 text-center">15:20</td>
+                  <td class="px-4 py-3 text-center">17:45</td>
+                  <td class="px-4 py-3 text-center">19:15</td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                  <td class="px-4 py-3 font-medium">2 Janar</td>
+                  <td class="px-4 py-3 text-center">05:30</td>
+                  <td class="px-4 py-3 text-center">12:46</td>
+                  <td class="px-4 py-3 text-center">15:21</td>
+                  <td class="px-4 py-3 text-center">17:46</td>
+                  <td class="px-4 py-3 text-center">19:16</td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                  <td class="px-4 py-3 font-medium">3 Janar</td>
+                  <td class="px-4 py-3 text-center">05:29</td>
+                  <td class="px-4 py-3 text-center">12:46</td>
+                  <td class="px-4 py-3 text-center">15:22</td>
+                  <td class="px-4 py-3 text-center">17:47</td>
+                  <td class="px-4 py-3 text-center">19:17</td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                  <td class="px-4 py-3 font-medium">4 Janar</td>
+                  <td class="px-4 py-3 text-center">05:29</td>
+                  <td class="px-4 py-3 text-center">12:47</td>
+                  <td class="px-4 py-3 text-center">15:23</td>
+                  <td class="px-4 py-3 text-center">17:48</td>
+                  <td class="px-4 py-3 text-center">19:18</td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                  <td class="px-4 py-3 font-medium">5 Janar</td>
+                  <td class="px-4 py-3 text-center">05:28</td>
+                  <td class="px-4 py-3 text-center">12:47</td>
+                  <td class="px-4 py-3 text-center">15:24</td>
+                  <td class="px-4 py-3 text-center">17:49</td>
+                  <td class="px-4 py-3 text-center">19:19</td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                  <td class="px-4 py-3 font-medium">6 Janar</td>
+                  <td class="px-4 py-3 text-center">05:28</td>
+                  <td class="px-4 py-3 text-center">12:48</td>
+                  <td class="px-4 py-3 text-center">15:25</td>
+                  <td class="px-4 py-3 text-center">17:50</td>
+                  <td class="px-4 py-3 text-center">19:20</td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                  <td class="px-4 py-3 font-medium">7 Janar</td>
+                  <td class="px-4 py-3 text-center">05:27</td>
+                  <td class="px-4 py-3 text-center">12:48</td>
+                  <td class="px-4 py-3 text-center">15:26</td>
+                  <td class="px-4 py-3 text-center">17:51</td>
+                  <td class="px-4 py-3 text-center">19:21</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="p-4 text-center bg-gray-50">
+            <p class="text-sm text-gray-600">
+              * Kohët janë të llogaritura për Prishtinë, Kosovë. Për qytete të
+              tjera mund të ketë ndryshime të vogla.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 📱 Aplikacioni mobil -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-[#C49A3A] mb-4">
+            Aplikacioni për telefon
+          </h2>
+          <p class="text-lg text-gray-600">
+            Shkarkoni aplikacionin tonë për të pasur kohët e namazit gjithmonë
+            me vete
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center max-w-4xl mx-auto">
+          <div>
+            <h3 class="text-2xl font-bold text-[#009C9C] mb-6">
+              Veçoritë e aplikacionit:
+            </h3>
+            <ul class="space-y-4">
+              <li class="flex items-center">
+                <span class="text-[#C49A3A] mr-3 text-xl">✓</span>
+                <span>Kohët e sakta të namazit për lokacionin tuaj</span>
+              </li>
+              <li class="flex items-center">
+                <span class="text-[#C49A3A] mr-3 text-xl">✓</span>
+                <span>Njoftimet automatike para çdo namazi</span>
+              </li>
+              <li class="flex items-center">
+                <span class="text-[#C49A3A] mr-3 text-xl">✓</span>
+                <span>Kalendari mujor dhe vjetor</span>
+              </li>
+              <li class="flex items-center">
+                <span class="text-[#C49A3A] mr-3 text-xl">✓</span>
+                <span>Drejtimi i Kiblës me kompas</span>
+              </li>
+              <li class="flex items-center">
+                <span class="text-[#C49A3A] mr-3 text-xl">✓</span>
+                <span>Leximi i Kur'anit me përkthim</span>
+              </li>
+              <li class="flex items-center">
+                <span class="text-[#C49A3A] mr-3 text-xl">✓</span>
+                <span>Dhikret dhe lutjet e përditshme</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="text-center">
+            <div class="bg-gray-100 rounded-lg p-8 mb-6">
+              <div
+                class="w-32 h-32 bg-[#C49A3A] rounded-lg mx-auto mb-4 flex items-center justify-center"
+              >
+                <span class="text-white text-4xl">📱</span>
+              </div>
+              <h4 class="text-xl font-bold mb-2">Xhamia App</h4>
+              <p class="text-gray-600">Versioni 2.1.0</p>
+            </div>
+
+            <div class="space-y-3">
+              <a
+                href="#"
+                class="block bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition"
+              >
+                📱 Shkarko për iOS
+              </a>
+              <a
+                href="#"
+                class="block bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition"
+              >
+                🤖 Shkarko për Android
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🧭 Informata shtesë -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Kibla -->
+          <div class="bg-white rounded-lg p-6 shadow-lg text-center">
+            <div
+              class="w-16 h-16 bg-[#C49A3A] rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <span class="text-white text-2xl">🧭</span>
+            </div>
+            <h3 class="text-xl font-bold text-[#C49A3A] mb-3">
+              Drejtimi i Kiblës
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Drejtimi i saktë i Kiblës për Prishtinë është 158° (Juglindor).
+            </p>
+            <div class="text-2xl font-bold text-[#009C9C]">158° SE</div>
+          </div>
+
+          <!-- Koordinatat -->
+          <div class="bg-white rounded-lg p-6 shadow-lg text-center">
+            <div
+              class="w-16 h-16 bg-[#009C9C] rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <span class="text-white text-2xl">📍</span>
+            </div>
+            <h3 class="text-xl font-bold text-[#009C9C] mb-3">Koordinatat</h3>
+            <p class="text-gray-600 mb-4">
+              Koordinatat e Prishtinës për llogaritjen e kohëve të namazit.
+            </p>
+            <div class="text-sm">
+              <p><strong>Gjerësia:</strong> 42.6629° N</p>
+              <p><strong>Gjatësia:</strong> 21.1655° E</p>
+            </div>
+          </div>
+
+          <!-- Metoda e llogaritjes -->
+          <div class="bg-white rounded-lg p-6 shadow-lg text-center">
+            <div
+              class="w-16 h-16 bg-[#C49A3A] rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <span class="text-white text-2xl">⚙️</span>
+            </div>
+            <h3 class="text-xl font-bold text-[#C49A3A] mb-3">
+              Metoda e llogaritjes
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Përdorim metodën e Universitetit të Shkencave Islame, Karachi.
+            </p>
+            <div class="text-sm text-gray-500">
+              <p>Sabahu: 18° nën horizont</p>
+              <p>Jacia: 18° nën horizont</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 📍 Footer -->
+    <footer class="bg-[#111] text-white py-10">
+      <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-3">Xhamia Ebu Beker Es-Siddik</h3>
+          <p>
+            Një vend për adhurim, dije dhe bashkim të komunitetit tonë musliman.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-3">Navigim</h4>
+          <ul class="space-y-2">
+            <li>
+              <a href="rreth-nesh.html" class="hover:text-[#C49A3A]"
+                >Rreth nesh</a
+              >
+            </li>
+            <li>
+              <a href="aktivitetet.html" class="hover:text-[#C49A3A]"
+                >Aktivitetet</a
+              >
+            </li>
+            <li>
+              <a href="namazi.html" class="hover:text-[#C49A3A]"
+                >Kohët e namazit</a
+              >
+            </li>
+            <li>
+              <a href="kontakt.html" class="hover:text-[#C49A3A]">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-3">Na kontaktoni</h4>
+          <p>Adresa: Rruga e Paqes 12, Prishtinë</p>
+          <p>Tel: +383 44 123 456</p>
+          <p>Email: info@xhamia-ebubeker.org</p>
+        </div>
+      </div>
+      <div class="text-center text-sm mt-10 border-t border-gray-700 pt-4">
+        &copy; 2025 Xhamia Ebu Beker Es-Siddik. Të gjitha të drejtat e
+        rezervuara.
+      </div>
+    </footer>
+
+    <!-- 📱 Mobile Menu Script -->
+    <script>
+      document.getElementById('menuBtn').addEventListener('click', () => {
+        document.getElementById('mobileMenu').classList.toggle('hidden');
+      });
+
+      // Shfaq datën aktuale
+      document.addEventListener('DOMContentLoaded', function () {
+        const today = new Date();
+        const options = {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        };
+        const dateString = today.toLocaleDateString('sq-AL', options);
+        document.getElementById('currentDate').textContent = dateString;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="sq">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galeria - Xhamia Ebu Beker Es-Siddik</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/jpg" href="./assets/logo.jpg" />
+  </head>
+  <body class="bg-white text-gray-800">
+    <!-- 🌙 Header Navigation -->
+    <header class="bg-white shadow fixed w-full z-50">
+      <div
+        class="container mx-auto flex items-center justify-between px-6 py-4"
+      >
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-2">
+          <img src="./assets/logo.jpg" alt="Logo" class="h-10 w-auto" />
+          <span class="text-xl font-bold text-[#C49A3A]"
+            >Xhamia Ebu Beker Es-Siddik</span
+          >
+        </a>
+
+        <!-- Navigation -->
+        <nav class="hidden md:flex space-x-6 font-medium">
+          <a href="index.html" class="hover:text-[#009C9C]">Kreu</a>
+          <a href="rreth-nesh.html" class="hover:text-[#009C9C]">Rreth nesh</a>
+          <a href="aktivitetet.html" class="hover:text-[#009C9C]"
+            >Aktivitetet</a
+          >
+          <a href="namazi.html" class="hover:text-[#009C9C]">Kohët e namazit</a>
+          <a href="eventet.html" class="hover:text-[#009C9C]">Eventet</a>
+          <a href="galeria.html" class="text-[#C49A3A] hover:text-[#009C9C]"
+            >Galeria</a
+          >
+          <a href="dhurime.html" class="hover:text-[#009C9C]">Dhurime</a>
+          <a href="kontakt.html" class="hover:text-[#009C9C]">Kontakt</a>
+        </nav>
+
+        <!-- Language Switch -->
+        <div class="hidden md:flex items-center space-x-2">
+          <a
+            href="#"
+            class="px-2 py-1 border border-[#C49A3A] rounded hover:bg-[#C49A3A] hover:text-white"
+            >🇦🇱</a
+          >
+          <a
+            href="#"
+            class="px-2 py-1 border border-[#C49A3A] rounded hover:bg-[#C49A3A] hover:text-white"
+            >🇩🇪</a
+          >
+          <a
+            href="#"
+            class="px-2 py-1 border border-[#C49A3A] rounded hover:bg-[#C49A3A] hover:text-white"
+            >🇦🇪</a
+          >
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="menuBtn"
+          class="md:hidden text-[#C49A3A] focus:outline-none"
+        >
+          ☰
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden bg-white border-t border-gray-200 px-6 pb-4"
+      >
+        <nav class="flex flex-col space-y-3">
+          <a href="index.html">Kreu</a>
+          <a href="rreth-nesh.html">Rreth nesh</a>
+          <a href="aktivitetet.html">Aktivitetet</a>
+          <a href="namazi.html">Kohët e namazit</a>
+          <a href="eventet.html">Eventet</a>
+          <a href="galeria.html" class="text-[#C49A3A]">Galeria</a>
+          <a href="dhurime.html">Dhurime</a>
+          <a href="kontakt.html">Kontakt</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- 🕌 Hero Section -->
+    <section
+      class="relative h-96 flex items-center justify-center bg-gradient-to-r from-[#C49A3A] to-[#009C9C]"
+    >
+      <div class="text-center text-white px-6">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Galeria jonë</h1>
+        <p class="text-lg md:text-xl max-w-2xl mx-auto">
+          Momentet më të bukura nga jeta e xhamisë dhe aktivitetet tona
+        </p>
+      </div>
+    </section>
+
+    <!-- 🏷️ Filtrat e galerisë -->
+    <section class="py-8 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center">
+          <div
+            class="inline-flex flex-wrap gap-2 bg-white rounded-lg p-2 shadow"
+          >
+            <button
+              class="gallery-filter active px-4 py-2 rounded-md bg-[#C49A3A] text-white font-medium"
+              data-filter="all"
+            >
+              Të gjitha
+            </button>
+            <button
+              class="gallery-filter px-4 py-2 rounded-md hover:bg-gray-100 font-medium"
+              data-filter="xhamia"
+            >
+              Xhamia
+            </button>
+            <button
+              class="gallery-filter px-4 py-2 rounded-md hover:bg-gray-100 font-medium"
+              data-filter="aktivitete"
+            >
+              Aktivitete
+            </button>
+            <button
+              class="gallery-filter px-4 py-2 rounded-md hover:bg-gray-100 font-medium"
+              data-filter="eventet"
+            >
+              Eventet
+            </button>
+            <button
+              class="gallery-filter px-4 py-2 rounded-md hover:bg-gray-100 font-medium"
+              data-filter="komuniteti"
+            >
+              Komuniteti
+            </button>
+            <button
+              class="gallery-filter px-4 py-2 rounded-md hover:bg-gray-100 font-medium"
+              data-filter="femije"
+            >
+              Fëmijët
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🖼️ Galeria kryesore -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          id="gallery-grid"
+        >
+          <!-- Foto 1 - Xhamia -->
+          <div
+            class="gallery-item xhamia group cursor-pointer"
+            onclick="openModal('modal1')"
+          >
+            <div
+              class="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105"
+            >
+              <div
+                class="aspect-w-4 aspect-h-3 bg-gradient-to-br from-[#C49A3A] to-[#009C9C] flex items-center justify-center"
+              >
+                <div class="text-center text-white p-8">
+                  <div class="text-6xl mb-4">🕌</div>
+                  <h3 class="text-xl font-bold">Xhamia nga jashtë</h3>
+                  <p class="text-sm opacity-90 mt-2">
+                    Pamja e jashtme e xhamisë tonë të bukur
+                  </p>
+                </div>
+              </div>
+              <div
+                class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Foto 2 - Aktivitete -->
+          <div
+            class="gallery-item aktivitete group cursor-pointer"
+            onclick="openModal('modal2')"
+          >
+            <div
+              class="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105"
+            >
+              <div
+                class="aspect-w-4 aspect-h-3 bg-gradient-to-br from-[#009C9C] to-[#C49A3A] flex items-center justify-center"
+              >
+                <div class="text-center text-white p-8">
+                  <div class="text-6xl mb-4">📚</div>
+                  <h3 class="text-xl font-bold">Mësime Kur'anore</h3>
+                  <p class="text-sm opacity-90 mt-2">
+                    Momentet nga mësimet tona të Kur'anit
+                  </p>
+                </div>
+              </div>
+              <div
+                class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Foto 3 - Eventet -->
+          <div
+            class="gallery-item eventet group cursor-pointer"
+            onclick="openModal('modal3')"
+          >
+            <div
+              class="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105"
+            >
+              <div
+                class="aspect-w-4 aspect-h-3 bg-gradient-to-br from-[#C49A3A] to-[#009C9C] flex items-center justify-center"
+              >
+                <div class="text-center text-white p-8">
+                  <div class="text-6xl mb-4">🎉</div>
+                  <h3 class="text-xl font-bold">Festimi i Bajramit</h3>
+                  <p class="text-sm opacity-90 mt-2">
+                    Gëzimi i komunitetit në Bajram
+                  </p>
+                </div>
+              </div>
+              <div
+                class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Foto 4 - Komuniteti -->
+          <div
+            class="gallery-item komuniteti group cursor-pointer"
+            onclick="openModal('modal4')"
+          >
+            <div
+              class="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105"
+            >
+              <div
+                class="aspect-w-4 aspect-h-3 bg-gradient-to-br from-[#009C9C] to-[#C49A3A] flex items-center justify-center"
+              >
+                <div class="text-center text-white p-8">
+                  <div class="text-6xl mb-4">👥</div>
+                  <h3 class="text-xl font-bold">Takimi i komunitetit</h3>
+                  <p class="text-sm opacity-90 mt-2">
+                    Bashkimi i besimtarëve në xhami
+                  </p>
+                </div>
+              </div>
+              <div
+                class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Foto 5 - Fëmijët -->
+          <div
+            class="gallery-item femije group cursor-pointer"
+            onclick="openModal('modal5')"
+          >
+            <div
+              class="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105"
+            >
+              <div
+                class="aspect-w-4 aspect-h-3 bg-gradient-to-br from-[#C49A3A] to-[#009C9C] flex items-center justify-center"
+              >
+                <div class="text-center text-white p-8">
+                  <div class="text-6xl mb-4">👶</div>
+                  <h3 class="text-xl font-bold">Shkolla e së Dielës</h3>
+                  <p class="text-sm opacity-90 mt-2">
+                    Fëmijët tanë duke mësuar
+                  </p>
+                </div>
+              </div>
+              <div
+                class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Foto 6 - Xhamia -->
+          <div
+            class="gallery-item xhamia group cursor-pointer"
+            onclick="openModal('modal6')"
+          >
+            <div
+              class="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105"
+            >
+              <div
+                class="aspect-w-4 aspect-h-3 bg-gradient-to-br from-[#009C9C] to-[#C49A3A] flex items-center justify-center"
+              >
+                <div class="text-center text-white p-8">
+                  <div class="text-6xl mb-4">🏛️</div>
+                  <h3 class="text-xl font-bold">Salla e namazit</h3>
+                  <p class="text-sm opacity-90 mt-2">
+                    Brendësia e bukur e xhamisë
+                  </p>
+                </div>
+              </div>
+              <div
+                class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Foto 7 - Aktivitete -->
+          <div
+            class="gallery-item aktivitete group cursor-pointer"
+            onclick="openModal('modal7')"
+          >
+            <div
+              class="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105"
+            >
+              <div
+                class="aspect-w-4 aspect-h-3 bg-gradient-to-br from-[#C49A3A] to-[#009C9C] flex items-center justify-center"
+              >
+                <div class="text-center text-white p-8">
+                  <div class="text-6xl mb-4">🎤</div>
+                  <h3 class="text-xl font-bold">Ligjërata</h3>
+                  <p class="text-sm opacity-90 mt-2">
+                    Imam duke mbajtur ligjëratë
+                  </p>
+                </div>
+              </div>
+              <div
+                class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Foto 8 - Komuniteti -->
+          <div
+            class="gallery-item komuniteti group cursor-pointer"
+            onclick="openModal('modal8')"
+          >
+            <div
+              class="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105"
+            >
+              <div
+                class="aspect-w-4 aspect-h-3 bg-gradient-to-br from-[#009C9C] to-[#C49A3A] flex items-center justify-center"
+              >
+                <div class="text-center text-white p-8">
+                  <div class="text-6xl mb-4">🤝</div>
+                  <h3 class="text-xl font-bold">Bamirësia</h3>
+                  <p class="text-sm opacity-90 mt-2">
+                    Ndihmojmë familjet në nevojë
+                  </p>
+                </div>
+              </div>
+              <div
+                class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Foto 9 - Eventet -->
+          <div
+            class="gallery-item eventet group cursor-pointer"
+            onclick="openModal('modal9')"
+          >
+            <div
+              class="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105"
+            >
+              <div
+                class="aspect-w-4 aspect-h-3 bg-gradient-to-br from-[#C49A3A] to-[#009C9C] flex items-center justify-center"
+              >
+                <div class="text-center text-white p-8">
+                  <div class="text-6xl mb-4">🌙</div>
+                  <h3 class="text-xl font-bold">Ramazani</h3>
+                  <p class="text-sm opacity-90 mt-2">
+                    Iftar i përbashkët në xhami
+                  </p>
+                </div>
+              </div>
+              <div
+                class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Foto 10 - Femije -->
+          <div
+            class="gallery-item femije group cursor-pointer"
+            onclick="openModal('modal10')"
+          >
+            <div
+              class="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105"
+            >
+              <div
+                class="aspect-w-4 aspect-h-3 bg-gradient-to-br from-[#009C9C] to-[#C49A3A] flex items-center justify-center"
+              >
+                <div class="text-center text-white p-8">
+                  <div class="text-6xl mb-4">🎨</div>
+                  <h3 class="text-xl font-bold">Aktivitete kreative</h3>
+                  <p class="text-sm opacity-90 mt-2">
+                    Fëmijët duke krijuar art islam
+                  </p>
+                </div>
+              </div>
+              <div
+                class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Foto 11 - Xhamia -->
+          <div
+            class="gallery-item xhamia group cursor-pointer"
+            onclick="openModal('modal11')"
+          >
+            <div
+              class="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105"
+            >
+              <div
+                class="aspect-w-4 aspect-h-3 bg-gradient-to-br from-[#C49A3A] to-[#009C9C] flex items-center justify-center"
+              >
+                <div class="text-center text-white p-8">
+                  <div class="text-6xl mb-4">🌅</div>
+                  <h3 class="text-xl font-bold">Namazi i mëngjesit</h3>
+                  <p class="text-sm opacity-90 mt-2">Sabahu në xhaminë tonë</p>
+                </div>
+              </div>
+              <div
+                class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Foto 12 - Aktivitete -->
+          <div
+            class="gallery-item aktivitete group cursor-pointer"
+            onclick="openModal('modal12')"
+          >
+            <div
+              class="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105"
+            >
+              <div
+                class="aspect-w-4 aspect-h-3 bg-gradient-to-br from-[#009C9C] to-[#C49A3A] flex items-center justify-center"
+              >
+                <div class="text-center text-white p-8">
+                  <div class="text-6xl mb-4">🔤</div>
+                  <h3 class="text-xl font-bold">Mësimi i arabishes</h3>
+                  <p class="text-sm opacity-90 mt-2">Kurset e gjuhës arabe</p>
+                </div>
+              </div>
+              <div
+                class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 📊 Statistikat e galerisë -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-[#C49A3A] mb-4">
+            Galeria në numra
+          </h2>
+          <p class="text-lg text-gray-600">
+            Disa statistika interesante nga koleksioni ynë i fotografive
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-[#C49A3A] rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <span class="text-white text-2xl">📸</span>
+            </div>
+            <div class="text-3xl font-bold text-[#C49A3A] mb-2">500+</div>
+            <p class="text-gray-600">Fotografi totale</p>
+          </div>
+
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-[#009C9C] rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <span class="text-white text-2xl">🎉</span>
+            </div>
+            <div class="text-3xl font-bold text-[#009C9C] mb-2">50+</div>
+            <p class="text-gray-600">Eventet e dokumentuara</p>
+          </div>
+
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-[#C49A3A] rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <span class="text-white text-2xl">📅</span>
+            </div>
+            <div class="text-3xl font-bold text-[#C49A3A] mb-2">5</div>
+            <p class="text-gray-600">Vite arkivi</p>
+          </div>
+
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-[#009C9C] rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <span class="text-white text-2xl">👥</span>
+            </div>
+            <div class="text-3xl font-bold text-[#009C9C] mb-2">1000+</div>
+            <p class="text-gray-600">Njerëz të fotografuar</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 📤 Ndani fotografitë tuaja -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-[#C49A3A] mb-4">
+            Ndani fotografitë tuaja
+          </h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Keni fotografi të bukura nga aktivitetet e xhamisë? Na i dërgoni që
+            t'i shtojmë në galerinë tonë!
+          </p>
+        </div>
+
+        <div class="max-w-2xl mx-auto bg-gray-50 rounded-lg p-8">
+          <form class="space-y-6">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2"
+                >Emri juaj</label
+              >
+              <input
+                type="text"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#C49A3A] focus:border-transparent"
+                placeholder="Shkruani emrin tuaj"
+              />
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2"
+                >Email</label
+              >
+              <input
+                type="email"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#C49A3A] focus:border-transparent"
+                placeholder="Shkruani email-in tuaj"
+              />
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2"
+                >Përshkrimi i fotografisë</label
+              >
+              <textarea
+                rows="3"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#C49A3A] focus:border-transparent"
+                placeholder="Tregoni diçka për fotografinë..."
+              ></textarea>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2"
+                >Ngarkoni fotografinë</label
+              >
+              <div
+                class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-[#C49A3A] transition"
+              >
+                <div class="text-4xl text-gray-400 mb-2">📷</div>
+                <p class="text-gray-600">
+                  Klikoni këtu ose zvarritni fotografinë
+                </p>
+                <input type="file" class="hidden" accept="image/*" />
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full bg-[#C49A3A] text-white py-3 rounded-lg hover:bg-[#009C9C] transition font-semibold"
+            >
+              Dërgo fotografinë
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal për fotografitë -->
+    <div
+      id="photoModal"
+      class="fixed inset-0 bg-black bg-opacity-75 hidden z-50 flex items-center justify-center p-4"
+    >
+      <div
+        class="bg-white rounded-lg max-w-4xl w-full max-h-full overflow-auto"
+      >
+        <div class="p-6">
+          <div class="flex justify-between items-center mb-4">
+            <h3 id="modalTitle" class="text-2xl font-bold text-[#C49A3A]">
+              Titulli i fotografisë
+            </h3>
+            <button
+              onclick="closeModal()"
+              class="text-gray-500 hover:text-gray-700 text-2xl"
+            >
+              &times;
+            </button>
+          </div>
+          <div id="modalContent" class="text-center">
+            <!-- Përmbajtja e modalit do të shtohet me JavaScript -->
+          </div>
+          <div class="mt-6 text-center">
+            <p id="modalDescription" class="text-gray-600">
+              Përshkrimi i fotografisë do të shfaqet këtu.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 📍 Footer -->
+    <footer class="bg-[#111] text-white py-10">
+      <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-3">Xhamia Ebu Beker Es-Siddik</h3>
+          <p>
+            Një vend për adhurim, dije dhe bashkim të komunitetit tonë musliman.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-3">Navigim</h4>
+          <ul class="space-y-2">
+            <li>
+              <a href="rreth-nesh.html" class="hover:text-[#C49A3A]"
+                >Rreth nesh</a
+              >
+            </li>
+            <li>
+              <a href="aktivitetet.html" class="hover:text-[#C49A3A]"
+                >Aktivitetet</a
+              >
+            </li>
+            <li>
+              <a href="namazi.html" class="hover:text-[#C49A3A]"
+                >Kohët e namazit</a
+              >
+            </li>
+            <li>
+              <a href="kontakt.html" class="hover:text-[#C49A3A]">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-3">Na kontaktoni</h4>
+          <p>Adresa: Rruga e Paqes 12, Prishtinë</p>
+          <p>Tel: +383 44 123 456</p>
+          <p>Email: info@xhamia-ebubeker.org</p>
+        </div>
+      </div>
+      <div class="text-center text-sm mt-10 border-t border-gray-700 pt-4">
+        &copy; 2025 Xhamia Ebu Beker Es-Siddik. Të gjitha të drejtat e
+        rezervuara.
+      </div>
+    </footer>
+
+    <!-- 📱 Scripts -->
+    <script>
+      // Mobile Menu
+      document.getElementById('menuBtn').addEventListener('click', () => {
+        document.getElementById('mobileMenu').classList.toggle('hidden');
+      });
+
+      // Gallery Filter
+      document.querySelectorAll('.gallery-filter').forEach((button) => {
+        button.addEventListener('click', () => {
+          // Remove active class from all buttons
+          document.querySelectorAll('.gallery-filter').forEach((btn) => {
+            btn.classList.remove('active', 'bg-[#C49A3A]', 'text-white');
+            btn.classList.add('hover:bg-gray-100');
+          });
+
+          // Add active class to clicked button
+          button.classList.add('active', 'bg-[#C49A3A]', 'text-white');
+          button.classList.remove('hover:bg-gray-100');
+
+          // Filter gallery items
+          const filter = button.getAttribute('data-filter');
+          const items = document.querySelectorAll('.gallery-item');
+
+          items.forEach((item) => {
+            if (filter === 'all' || item.classList.contains(filter)) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // Modal functions
+      function openModal(modalId) {
+        const modal = document.getElementById('photoModal');
+        const title = document.getElementById('modalTitle');
+        const content = document.getElementById('modalContent');
+        const description = document.getElementById('modalDescription');
+
+        // Sample modal content - në një implementim real, këto do të merreshin nga një databazë
+        const modalData = {
+          modal1: {
+            title: 'Xhamia nga jashtë',
+            content: '<div class="text-8xl text-[#C49A3A] mb-4">🕌</div>',
+            description:
+              'Pamja e jashtme e xhamisë sonë të bukur, e ndërtuar me dashuri dhe përkushtim për komunitetin.',
+          },
+          modal2: {
+            title: "Mësime Kur'anore",
+            content: '<div class="text-8xl text-[#009C9C] mb-4">📚</div>',
+            description:
+              "Momentet nga mësimet tona të Kur'anit ku besimtarët mësojnë leximin e saktë dhe kuptimin e ajeteve.",
+          },
+          // Shtoni të tjerat sipas nevojës...
+        };
+
+        const data = modalData[modalId] || {
+          title: 'Fotografia',
+          content: '<div class="text-8xl text-[#C49A3A] mb-4">📷</div>',
+          description: 'Një moment i bukur nga jeta e xhamisë sonë.',
+        };
+
+        title.textContent = data.title;
+        content.innerHTML = data.content;
+        description.textContent = data.description;
+
+        modal.classList.remove('hidden');
+      }
+
+      function closeModal() {
+        document.getElementById('photoModal').classList.add('hidden');
+      }
+
+      // Close modal when clicking outside
+      document.getElementById('photoModal').addEventListener('click', (e) => {
+        if (e.target === e.currentTarget) {
+          closeModal();
+        }
+      });
+    </script>
+  </body>
+</html>

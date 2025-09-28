@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="sq">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aktivitetet - Xhamia Ebu Beker Es-Siddik</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/jpg" href="./assets/logo.jpg" />
+  </head>
+  <body class="bg-white text-gray-800">
+    <!-- 🌙 Header Navigation -->
+    <header class="bg-white shadow fixed w-full z-50">
+      <div
+        class="container mx-auto flex items-center justify-between px-6 py-4"
+      >
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-2">
+          <img src="./assets/logo.jpg" alt="Logo" class="h-10 w-auto" />
+          <span class="text-xl font-bold text-[#C49A3A]"
+            >Xhamia Ebu Beker Es-Siddik</span
+          >
+        </a>
+
+        <!-- Navigation -->
+        <nav class="hidden md:flex space-x-6 font-medium">
+          <a href="index.html" class="hover:text-[#009C9C]">Kreu</a>
+          <a href="rreth-nesh.html" class="hover:text-[#009C9C]">Rreth nesh</a>
+          <a href="aktivitetet.html" class="text-[#C49A3A] hover:text-[#009C9C]"
+            >Aktivitetet</a
+          >
+          <a href="namazi.html" class="hover:text-[#009C9C]">Kohët e namazit</a>
+          <a href="eventet.html" class="hover:text-[#009C9C]">Eventet</a>
+          <a href="galeria.html" class="hover:text-[#009C9C]">Galeria</a>
+          <a href="dhurime.html" class="hover:text-[#009C9C]">Dhurime</a>
+          <a href="kontakt.html" class="hover:text-[#009C9C]">Kontakt</a>
+        </nav>
+
+        <!-- Language Switch -->
+        <div class="hidden md:flex items-center space-x-2">
+          <a
+            href="#"
+            class="px-2 py-1 border border-[#C49A3A] rounded hover:bg-[#C49A3A] hover:text-white"
+            >🇦🇱</a
+          >
+          <a
+            href="#"
+            class="px-2 py-1 border border-[#C49A3A] rounded hover:bg-[#C49A3A] hover:text-white"
+            >🇩🇪</a
+          >
+          <a
+            href="#"
+            class="px-2 py-1 border border-[#C49A3A] rounded hover:bg-[#C49A3A] hover:text-white"
+            >🇦🇪</a
+          >
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="menuBtn"
+          class="md:hidden text-[#C49A3A] focus:outline-none"
+        >
+          ☰
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden bg-white border-t border-gray-200 px-6 pb-4"
+      >
+        <nav class="flex flex-col space-y-3">
+          <a href="index.html">Kreu</a>
+          <a href="rreth-nesh.html">Rreth nesh</a>
+          <a href="aktivitetet.html" class="text-[#C49A3A]">Aktivitetet</a>
+          <a href="namazi.html">Kohët e namazit</a>
+          <a href="eventet.html">Eventet</a>
+          <a href="galeria.html">Galeria</a>
+          <a href="dhurime.html">Dhurime</a>
+          <a href="kontakt.html">Kontakt</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- 🕌 Hero Section -->
+    <section
+      class="relative h-96 flex items-center justify-center bg-gradient-to-r from-[#009C9C] to-[#C49A3A]"
+    >
+      <div class="text-center text-white px-6">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Aktivitetet tona</h1>
+        <p class="text-lg md:text-xl max-w-2xl mx-auto">
+          Zbuloni programet dhe aktivitetet e shumta që ofrojmë për komunitetin
+        </p>
+      </div>
+    </section>
+
+    <!-- 📚 Aktivitetet kryesore -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-[#C49A3A] mb-4">
+            Aktivitetet tona kryesore
+          </h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Xhamia jonë ofron një gamë të gjerë aktivitetesh për të gjitha
+            moshat dhe interesat
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Mësime Kur'anore -->
+          <div
+            class="bg-gray-50 rounded-lg p-6 shadow-lg hover:shadow-xl transition"
+          >
+            <div class="text-center mb-4">
+              <div
+                class="w-16 h-16 bg-[#C49A3A] rounded-full flex items-center justify-center mx-auto mb-3"
+              >
+                <span class="text-white text-2xl">📖</span>
+              </div>
+              <h3 class="text-xl font-bold text-[#C49A3A]">Mësime Kur'anore</h3>
+            </div>
+            <p class="text-gray-700 mb-4">
+              Mësime të rregullta për leximin e saktë të Kur'anit, me fokus në
+              Tecvid dhe kuptimin e ajeteve.
+            </p>
+            <div class="text-sm text-gray-600">
+              <p><strong>Koha:</strong> E hënë, E mërkurë, E shtunë - 18:00</p>
+              <p><strong>Mosha:</strong> Të gjitha moshat</p>
+              <p><strong>Gjuha:</strong> Shqip dhe Arabisht</p>
+            </div>
+          </div>
+
+          <!-- Ligjërata dhe Seminare -->
+          <div
+            class="bg-gray-50 rounded-lg p-6 shadow-lg hover:shadow-xl transition"
+          >
+            <div class="text-center mb-4">
+              <div
+                class="w-16 h-16 bg-[#009C9C] rounded-full flex items-center justify-center mx-auto mb-3"
+              >
+                <span class="text-white text-2xl">🎤</span>
+              </div>
+              <h3 class="text-xl font-bold text-[#009C9C]">
+                Ligjërata & Seminare
+              </h3>
+            </div>
+            <p class="text-gray-700 mb-4">
+              Ligjërata javore mbi tema të ndryshme islame, etikë, familje dhe
+              çështje aktuale shoqërore.
+            </p>
+            <div class="text-sm text-gray-600">
+              <p><strong>Koha:</strong> E premte pas namazit të Xhumasë</p>
+              <p><strong>Kohëzgjatja:</strong> 30-45 minuta</p>
+              <p><strong>Tematikat:</strong> Të ndryshme</p>
+            </div>
+          </div>
+
+          <!-- Aktivitete për Rininë -->
+          <div
+            class="bg-gray-50 rounded-lg p-6 shadow-lg hover:shadow-xl transition"
+          >
+            <div class="text-center mb-4">
+              <div
+                class="w-16 h-16 bg-[#C49A3A] rounded-full flex items-center justify-center mx-auto mb-3"
+              >
+                <span class="text-white text-2xl">👥</span>
+              </div>
+              <h3 class="text-xl font-bold text-[#C49A3A]">
+                Aktivitete për Rininë
+              </h3>
+            </div>
+            <p class="text-gray-700 mb-4">
+              Programe të veçanta për të rinjtë me diskutime, aktivitete
+              sportive dhe projekte sociale.
+            </p>
+            <div class="text-sm text-gray-600">
+              <p><strong>Mosha:</strong> 14-25 vjeç</p>
+              <p><strong>Koha:</strong> E diel - 16:00</p>
+              <p><strong>Aktivitete:</strong> Diskutime, sport, projekte</p>
+            </div>
+          </div>
+
+          <!-- Shkolla e së Dielës -->
+          <div
+            class="bg-gray-50 rounded-lg p-6 shadow-lg hover:shadow-xl transition"
+          >
+            <div class="text-center mb-4">
+              <div
+                class="w-16 h-16 bg-[#009C9C] rounded-full flex items-center justify-center mx-auto mb-3"
+              >
+                <span class="text-white text-2xl">🏫</span>
+              </div>
+              <h3 class="text-xl font-bold text-[#009C9C]">
+                Shkolla e së Dielës
+              </h3>
+            </div>
+            <p class="text-gray-700 mb-4">
+              Mësime të strukturuara për fëmijë mbi bazat e fesë islame,
+              historinë dhe vlerat morale.
+            </p>
+            <div class="text-sm text-gray-600">
+              <p><strong>Mosha:</strong> 6-14 vjeç</p>
+              <p><strong>Koha:</strong> E diel - 10:00-12:00</p>
+              <p><strong>Mësuesit:</strong> Të kualifikuar</p>
+            </div>
+          </div>
+
+          <!-- Kurse Gjuhe Arabe -->
+          <div
+            class="bg-gray-50 rounded-lg p-6 shadow-lg hover:shadow-xl transition"
+          >
+            <div class="text-center mb-4">
+              <div
+                class="w-16 h-16 bg-[#C49A3A] rounded-full flex items-center justify-center mx-auto mb-3"
+              >
+                <span class="text-white text-2xl">🔤</span>
+              </div>
+              <h3 class="text-xl font-bold text-[#C49A3A]">
+                Kurse Gjuhe Arabe
+              </h3>
+            </div>
+            <p class="text-gray-700 mb-4">
+              Mësoni gjuhën arabe për të kuptuar më mirë Kur'anin dhe tekstet e
+              tjera islame.
+            </p>
+            <div class="text-sm text-gray-600">
+              <p><strong>Nivelet:</strong> Fillestar, Mesatar, Përparuar</p>
+              <p><strong>Koha:</strong> E martë dhe E enjte - 19:00</p>
+              <p><strong>Kohëzgjatja:</strong> 6 muaj për nivel</p>
+            </div>
+          </div>
+
+          <!-- Aktivitete Bamirësie -->
+          <div
+            class="bg-gray-50 rounded-lg p-6 shadow-lg hover:shadow-xl transition"
+          >
+            <div class="text-center mb-4">
+              <div
+                class="w-16 h-16 bg-[#009C9C] rounded-full flex items-center justify-center mx-auto mb-3"
+              >
+                <span class="text-white text-2xl">🤝</span>
+              </div>
+              <h3 class="text-xl font-bold text-[#009C9C]">
+                Aktivitete Bamirësie
+              </h3>
+            </div>
+            <p class="text-gray-700 mb-4">
+              Organizojmë aktivitete për ndihmën e familjeve në nevojë, të
+              moshuarve dhe komunitetit.
+            </p>
+            <div class="text-sm text-gray-600">
+              <p><strong>Lloji:</strong> Ndihma materiale, ushqimore</p>
+              <p><strong>Frekuenca:</strong> Sipas nevojës</p>
+              <p><strong>Vullnetarë:</strong> Të mirëpritur</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 📅 Orari javor -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-[#C49A3A] mb-4">
+            Orari javor i aktiviteteve
+          </h2>
+          <p class="text-lg text-gray-600">
+            Planifikoni vizitën tuaj sipas orarit tonë të aktiviteteve
+          </p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="w-full">
+              <thead class="bg-[#C49A3A] text-white">
+                <tr>
+                  <th class="px-6 py-4 text-left">Dita</th>
+                  <th class="px-6 py-4 text-left">Koha</th>
+                  <th class="px-6 py-4 text-left">Aktiviteti</th>
+                  <th class="px-6 py-4 text-left">Grupmoshat</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr class="hover:bg-gray-50">
+                  <td class="px-6 py-4 font-medium">E hënë</td>
+                  <td class="px-6 py-4">18:00 - 19:30</td>
+                  <td class="px-6 py-4">Mësime Kur'anore</td>
+                  <td class="px-6 py-4">Të gjitha moshat</td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                  <td class="px-6 py-4 font-medium">E martë</td>
+                  <td class="px-6 py-4">19:00 - 20:30</td>
+                  <td class="px-6 py-4">Kurse Gjuhe Arabe</td>
+                  <td class="px-6 py-4">Të rritur</td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                  <td class="px-6 py-4 font-medium">E mërkurë</td>
+                  <td class="px-6 py-4">18:00 - 19:30</td>
+                  <td class="px-6 py-4">Mësime Kur'anore</td>
+                  <td class="px-6 py-4">Të gjitha moshat</td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                  <td class="px-6 py-4 font-medium">E enjte</td>
+                  <td class="px-6 py-4">19:00 - 20:30</td>
+                  <td class="px-6 py-4">Kurse Gjuhe Arabe</td>
+                  <td class="px-6 py-4">Të rritur</td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                  <td class="px-6 py-4 font-medium">E premte</td>
+                  <td class="px-6 py-4">13:30 - 14:15</td>
+                  <td class="px-6 py-4">Ligjërata pas Xhumasë</td>
+                  <td class="px-6 py-4">Të gjitha moshat</td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                  <td class="px-6 py-4 font-medium">E shtunë</td>
+                  <td class="px-6 py-4">18:00 - 19:30</td>
+                  <td class="px-6 py-4">Mësime Kur'anore</td>
+                  <td class="px-6 py-4">Të gjitha moshat</td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                  <td class="px-6 py-4 font-medium">E diel</td>
+                  <td class="px-6 py-4">10:00 - 12:00</td>
+                  <td class="px-6 py-4">Shkolla e së Dielës</td>
+                  <td class="px-6 py-4">6-14 vjeç</td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                  <td class="px-6 py-4 font-medium">E diel</td>
+                  <td class="px-6 py-4">16:00 - 17:30</td>
+                  <td class="px-6 py-4">Aktivitete për Rininë</td>
+                  <td class="px-6 py-4">14-25 vjeç</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🎯 Si të regjistrohesh -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-[#C49A3A] mb-4">
+            Si të regjistrohesh
+          </h2>
+          <p class="text-lg text-gray-600">
+            Bashkohuni me aktivitetet tona duke ndjekur këto hapa të thjeshtë
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-[#C49A3A] rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <span class="text-white text-2xl font-bold">1</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Vizitoni xhaminë</h3>
+            <p class="text-gray-600">
+              Ejani në xhami dhe takohuni me stafin tonë për të diskutuar
+              interesat tuaja.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-[#009C9C] rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <span class="text-white text-2xl font-bold">2</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Plotësoni formularin</h3>
+            <p class="text-gray-600">
+              Plotësoni formularin e regjistrimit për aktivitetin që ju
+              intereson.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-[#C49A3A] rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <span class="text-white text-2xl font-bold">3</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Filloni pjesëmarrjen</h3>
+            <p class="text-gray-600">
+              Merrni pjesë në aktivitetet dhe bëhuni pjesë e komunitetit tonë.
+            </p>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a
+            href="kontakt.html"
+            class="inline-block px-8 py-3 bg-[#009C9C] text-white rounded-lg hover:bg-[#C49A3A] transition text-lg font-semibold"
+          >
+            Kontaktoni për regjistrim
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 📍 Footer -->
+    <footer class="bg-[#111] text-white py-10">
+      <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-3">Xhamia Ebu Beker Es-Siddik</h3>
+          <p>
+            Një vend për adhurim, dije dhe bashkim të komunitetit tonë musliman.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-3">Navigim</h4>
+          <ul class="space-y-2">
+            <li>
+              <a href="rreth-nesh.html" class="hover:text-[#C49A3A]"
+                >Rreth nesh</a
+              >
+            </li>
+            <li>
+              <a href="aktivitetet.html" class="hover:text-[#C49A3A]"
+                >Aktivitetet</a
+              >
+            </li>
+            <li>
+              <a href="namazi.html" class="hover:text-[#C49A3A]"
+                >Kohët e namazit</a
+              >
+            </li>
+            <li>
+              <a href="kontakt.html" class="hover:text-[#C49A3A]">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-3">Na kontaktoni</h4>
+          <p>Adresa: Rruga e Paqes 12, Prishtinë</p>
+          <p>Tel: +383 44 123 456</p>
+          <p>Email: info@xhamia-ebubeker.org</p>
+        </div>
+      </div>
+      <div class="text-center text-sm mt-10 border-t border-gray-700 pt-4">
+        &copy; 2025 Xhamia Ebu Beker Es-Siddik. Të gjitha të drejtat e
+        rezervuara.
+      </div>
+    </footer>
+
+    <!-- 📱 Mobile Menu Script -->
+    <script>
+      document.getElementById('menuBtn').addEventListener('click', () => {
+        document.getElementById('mobileMenu').classList.toggle('hidden');
+      });
+    </script>
+  </body>
+</html>

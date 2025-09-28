@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="sq">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventet - Xhamia Ebu Beker Es-Siddik</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/jpg" href="./assets/logo.jpg" />
+  </head>
+  <body class="bg-white text-gray-800">
+    <!-- 🌙 Header Navigation -->
+    <header class="bg-white shadow fixed w-full z-50">
+      <div
+        class="container mx-auto flex items-center justify-between px-6 py-4"
+      >
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-2">
+          <img src="./assets/logo.jpg" alt="Logo" class="h-10 w-auto" />
+          <span class="text-xl font-bold text-[#C49A3A]"
+            >Xhamia Ebu Beker Es-Siddik</span
+          >
+        </a>
+
+        <!-- Navigation -->
+        <nav class="hidden md:flex space-x-6 font-medium">
+          <a href="index.html" class="hover:text-[#009C9C]">Kreu</a>
+          <a href="rreth-nesh.html" class="hover:text-[#009C9C]">Rreth nesh</a>
+          <a href="aktivitetet.html" class="hover:text-[#009C9C]"
+            >Aktivitetet</a
+          >
+          <a href="namazi.html" class="hover:text-[#009C9C]">Kohët e namazit</a>
+          <a href="eventet.html" class="text-[#C49A3A] hover:text-[#009C9C]"
+            >Eventet</a
+          >
+          <a href="galeria.html" class="hover:text-[#009C9C]">Galeria</a>
+          <a href="dhurime.html" class="hover:text-[#009C9C]">Dhurime</a>
+          <a href="kontakt.html" class="hover:text-[#009C9C]">Kontakt</a>
+        </nav>
+
+        <!-- Language Switch -->
+        <div class="hidden md:flex items-center space-x-2">
+          <a
+            href="#"
+            class="px-2 py-1 border border-[#C49A3A] rounded hover:bg-[#C49A3A] hover:text-white"
+            >🇦🇱</a
+          >
+          <a
+            href="#"
+            class="px-2 py-1 border border-[#C49A3A] rounded hover:bg-[#C49A3A] hover:text-white"
+            >🇩🇪</a
+          >
+          <a
+            href="#"
+            class="px-2 py-1 border border-[#C49A3A] rounded hover:bg-[#C49A3A] hover:text-white"
+            >🇦🇪</a
+          >
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="menuBtn"
+          class="md:hidden text-[#C49A3A] focus:outline-none"
+        >
+          ☰
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden bg-white border-t border-gray-200 px-6 pb-4"
+      >
+        <nav class="flex flex-col space-y-3">
+          <a href="index.html">Kreu</a>
+          <a href="rreth-nesh.html">Rreth nesh</a>
+          <a href="aktivitetet.html">Aktivitetet</a>
+          <a href="namazi.html">Kohët e namazit</a>
+          <a href="eventet.html" class="text-[#C49A3A]">Eventet</a>
+          <a href="galeria.html">Galeria</a>
+          <a href="dhurime.html">Dhurime</a>
+          <a href="kontakt.html">Kontakt</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- 🕌 Hero Section -->
+    <section
+      class="relative h-96 flex items-center justify-center bg-gradient-to-r from-[#009C9C] to-[#C49A3A]"
+    >
+      <div class="text-center text-white px-6">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Eventet e ardhshme</h1>
+        <p class="text-lg md:text-xl max-w-2xl mx-auto">
+          Zbuloni aktivitetet dhe programet e veçanta që organizojmë
+        </p>
+      </div>
+    </section>
+
+    <!-- 🎉 Eventi i ardhshëm kryesor -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-[#C49A3A] mb-4">
+            Eventi i ardhshëm
+          </h2>
+          <p class="text-lg text-gray-600">
+            Mos e humbisni eventin tonë të ardhshëm të rëndësishëm
+          </p>
+        </div>
+
+        <div
+          class="bg-gradient-to-r from-[#C49A3A] to-[#009C9C] rounded-lg p-8 text-white max-w-4xl mx-auto"
+        >
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <div class="text-sm font-semibold mb-2 opacity-90">
+                EVENTI I ARDHSHËM
+              </div>
+              <h3 class="text-3xl font-bold mb-4">
+                Seminari: "Familja në Islam"
+              </h3>
+              <p class="text-lg mb-6 opacity-90">
+                Një seminar i veçantë mbi rolin e familjes në Islam, me fokus në
+                edukimin e fëmijëve, marrëdhëniet bashkëshortore dhe vlerat
+                familjare islame.
+              </p>
+
+              <div class="space-y-3">
+                <div class="flex items-center">
+                  <span class="mr-3 text-xl">📅</span>
+                  <span><strong>Data:</strong> E shtunë, 15 Shkurt 2025</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="mr-3 text-xl">⏰</span>
+                  <span><strong>Ora:</strong> 18:00 - 20:00</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="mr-3 text-xl">👨‍🏫</span>
+                  <span><strong>Ligjëruesi:</strong> Dr. Ismail Kadriu</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="mr-3 text-xl">🎫</span>
+                  <span><strong>Pjesëmarrja:</strong> Falas</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center">
+              <div class="bg-white bg-opacity-20 rounded-lg p-6 mb-6">
+                <div class="text-6xl mb-4">👨‍👩‍👧‍👦</div>
+                <h4 class="text-xl font-bold">Për të gjithë familjen</h4>
+              </div>
+              <a
+                href="kontakt.html"
+                class="inline-block bg-white text-[#C49A3A] px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition"
+              >
+                Regjistrohu tani
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 📅 Eventet e ardhshme -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-[#C49A3A] mb-4">
+            Kalendari i eventeve
+          </h2>
+          <p class="text-lg text-gray-600">
+            Të gjitha eventet e planifikuara për muajt e ardhshëm
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Event 1 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition"
+          >
+            <div class="bg-[#C49A3A] text-white p-4">
+              <div class="flex justify-between items-center">
+                <div>
+                  <div class="text-2xl font-bold">22</div>
+                  <div class="text-sm">Shkurt</div>
+                </div>
+                <div class="text-3xl">📚</div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-[#C49A3A] mb-2">
+                Mbrëmje Kur'anore
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Mbrëmje e veçantë me lexim të Kur'anit dhe shpjegime të ajeteve
+                të zgjedhura.
+              </p>
+              <div class="text-sm text-gray-500 space-y-1">
+                <div class="flex items-center">
+                  <span class="mr-2">⏰</span>
+                  <span>19:00 - 21:00</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="mr-2">👥</span>
+                  <span>Të gjitha moshat</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 2 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition"
+          >
+            <div class="bg-[#009C9C] text-white p-4">
+              <div class="flex justify-between items-center">
+                <div>
+                  <div class="text-2xl font-bold">28</div>
+                  <div class="text-sm">Shkurt</div>
+                </div>
+                <div class="text-3xl">🤝</div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-[#009C9C] mb-2">
+                Aksion Bamirësie
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Organizojmë një aksion për mbledhjen e ndihmave për familjet në
+                nevojë.
+              </p>
+              <div class="text-sm text-gray-500 space-y-1">
+                <div class="flex items-center">
+                  <span class="mr-2">⏰</span>
+                  <span>10:00 - 16:00</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="mr-2">🎯</span>
+                  <span>Vullnetarë të mirëpritur</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 3 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition"
+          >
+            <div class="bg-[#C49A3A] text-white p-4">
+              <div class="flex justify-between items-center">
+                <div>
+                  <div class="text-2xl font-bold">8</div>
+                  <div class="text-sm">Mars</div>
+                </div>
+                <div class="text-3xl">👩</div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-[#C49A3A] mb-2">
+                Dita e Gruas
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Program i veçantë për gratë me ligjëratë mbi rolin e gruas në
+                Islam.
+              </p>
+              <div class="text-sm text-gray-500 space-y-1">
+                <div class="flex items-center">
+                  <span class="mr-2">⏰</span>
+                  <span>15:00 - 17:00</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="mr-2">👥</span>
+                  <span>Vetëm për gra</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 4 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition"
+          >
+            <div class="bg-[#009C9C] text-white p-4">
+              <div class="flex justify-between items-center">
+                <div>
+                  <div class="text-2xl font-bold">15</div>
+                  <div class="text-sm">Mars</div>
+                </div>
+                <div class="text-3xl">👶</div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-[#009C9C] mb-2">
+                Aktivitete për Fëmijë
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Ditë e veçantë me lojëra edukative dhe konkurse për fëmijët.
+              </p>
+              <div class="text-sm text-gray-500 space-y-1">
+                <div class="flex items-center">
+                  <span class="mr-2">⏰</span>
+                  <span>14:00 - 17:00</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="mr-2">👥</span>
+                  <span>5-12 vjeç</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 5 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition"
+          >
+            <div class="bg-[#C49A3A] text-white p-4">
+              <div class="flex justify-between items-center">
+                <div>
+                  <div class="text-2xl font-bold">22</div>
+                  <div class="text-sm">Mars</div>
+                </div>
+                <div class="text-3xl">🌙</div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-[#C49A3A] mb-2">
+                Fillimi i Ramazanit
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Ceremoni e veçantë për pritjen e muajit të shenjtë të Ramazanit.
+              </p>
+              <div class="text-sm text-gray-500 space-y-1">
+                <div class="flex items-center">
+                  <span class="mr-2">⏰</span>
+                  <span>20:00 - 21:30</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="mr-2">🎯</span>
+                  <span>Event i rëndësishëm</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 6 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition"
+          >
+            <div class="bg-[#009C9C] text-white p-4">
+              <div class="flex justify-between items-center">
+                <div>
+                  <div class="text-2xl font-bold">5</div>
+                  <div class="text-sm">Prill</div>
+                </div>
+                <div class="text-3xl">🏃‍♂️</div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-[#009C9C] mb-2">
+                Aktivitete Sportive
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Turneu futbolli dhe aktivitete të tjera sportive për rininë.
+              </p>
+              <div class="text-sm text-gray-500 space-y-1">
+                <div class="flex items-center">
+                  <span class="mr-2">⏰</span>
+                  <span>16:00 - 19:00</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="mr-2">👥</span>
+                  <span>14-30 vjeç</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🎯 Eventet e rregullta -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-[#C49A3A] mb-4">
+            Eventet e rregullta
+          </h2>
+          <p class="text-lg text-gray-600">
+            Aktivitete që organizohen rregullisht gjatë vitit
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h3 class="text-2xl font-bold text-[#C49A3A] mb-4">
+              Aktivitete mujore
+            </h3>
+            <ul class="space-y-3">
+              <li class="flex items-center">
+                <span class="text-[#009C9C] mr-3 text-xl">📖</span>
+                <span
+                  ><strong>Mbrëmje Kur'anore</strong> - Çdo të shtunë e fundit
+                  të muajit</span
+                >
+              </li>
+              <li class="flex items-center">
+                <span class="text-[#009C9C] mr-3 text-xl">🤝</span>
+                <span
+                  ><strong>Aksione Bamirësie</strong> - Çdo muaj sipas
+                  nevojës</span
+                >
+              </li>
+              <li class="flex items-center">
+                <span class="text-[#009C9C] mr-3 text-xl">👥</span>
+                <span
+                  ><strong>Takime Komuniteti</strong> - Çdo muaj të parë</span
+                >
+              </li>
+              <li class="flex items-center">
+                <span class="text-[#009C9C] mr-3 text-xl">🧹</span>
+                <span
+                  ><strong>Pastrimi i Xhamisë</strong> - Çdo të shtunë e
+                  parë</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h3 class="text-2xl font-bold text-[#009C9C] mb-4">
+              Aktivitete vjetore
+            </h3>
+            <ul class="space-y-3">
+              <li class="flex items-center">
+                <span class="text-[#C49A3A] mr-3 text-xl">🌙</span>
+                <span
+                  ><strong>Ramazani</strong> - Iftar dhe Teraveh çdo ditë</span
+                >
+              </li>
+              <li class="flex items-center">
+                <span class="text-[#C49A3A] mr-3 text-xl">🎉</span>
+                <span><strong>Bajrami</strong> - Festimet e Bajramit</span>
+              </li>
+              <li class="flex items-center">
+                <span class="text-[#C49A3A] mr-3 text-xl">🕌</span>
+                <span><strong>Isra dhe Miraj</strong> - Program i veçantë</span>
+              </li>
+              <li class="flex items-center">
+                <span class="text-[#C49A3A] mr-3 text-xl">📚</span>
+                <span><strong>Konferenca Vjetore</strong> - Tetor/Nëntor</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 📝 Regjistrohu për njoftimet -->
+    <section class="py-20 bg-[#C49A3A]">
+      <div class="container mx-auto px-6 text-center">
+        <div class="max-w-2xl mx-auto text-white">
+          <h2 class="text-3xl font-bold mb-4">Mos humbisni asnjë event!</h2>
+          <p class="text-lg mb-8 opacity-90">
+            Regjistrohuni për të marrë njoftimet e eventeve të ardhshme direkt
+            në email.
+          </p>
+
+          <form class="flex flex-col md:flex-row gap-4 max-w-md mx-auto">
+            <input
+              type="email"
+              placeholder="Shkruani email-in tuaj"
+              class="flex-1 px-4 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-white"
+              required
+            />
+            <button
+              type="submit"
+              class="px-6 py-3 bg-[#009C9C] text-white rounded-lg hover:bg-opacity-90 transition font-semibold"
+            >
+              Regjistrohu
+            </button>
+          </form>
+
+          <p class="text-sm mt-4 opacity-75">
+            * Do të merrni vetëm njoftimet e eventeve. Nuk do të ndajmë të
+            dhënat tuaja.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 📞 Kontakt për eventet -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-[#C49A3A] mb-4">
+            Keni pyetje për eventet?
+          </h2>
+          <p class="text-lg text-gray-600">
+            Na kontaktoni për informacione shtesë ose për të propozuar evente të
+            reja
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-[#C49A3A] rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <span class="text-white text-2xl">📞</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Telefononi</h3>
+            <p class="text-gray-600">+383 44 123 456</p>
+          </div>
+
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-[#009C9C] rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <span class="text-white text-2xl">✉️</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Email</h3>
+            <p class="text-gray-600">eventet@xhamia-ebubeker.org</p>
+          </div>
+
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-[#C49A3A] rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <span class="text-white text-2xl">🏢</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Vizitoni</h3>
+            <p class="text-gray-600">Rruga e Paqes 12, Prishtinë</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 📍 Footer -->
+    <footer class="bg-[#111] text-white py-10">
+      <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-3">Xhamia Ebu Beker Es-Siddik</h3>
+          <p>
+            Një vend për adhurim, dije dhe bashkim të komunitetit tonë musliman.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-3">Navigim</h4>
+          <ul class="space-y-2">
+            <li>
+              <a href="rreth-nesh.html" class="hover:text-[#C49A3A]"
+                >Rreth nesh</a
+              >
+            </li>
+            <li>
+              <a href="aktivitetet.html" class="hover:text-[#C49A3A]"
+                >Aktivitetet</a
+              >
+            </li>
+            <li>
+              <a href="namazi.html" class="hover:text-[#C49A3A]"
+                >Kohët e namazit</a
+              >
+            </li>
+            <li>
+              <a href="kontakt.html" class="hover:text-[#C49A3A]">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-3">Na kontaktoni</h4>
+          <p>Adresa: Rruga e Paqes 12, Prishtinë</p>
+          <p>Tel: +383 44 123 456</p>
+          <p>Email: info@xhamia-ebubeker.org</p>
+        </div>
+      </div>
+      <div class="text-center text-sm mt-10 border-t border-gray-700 pt-4">
+        &copy; 2025 Xhamia Ebu Beker Es-Siddik. Të gjitha të drejtat e
+        rezervuara.
+      </div>
+    </footer>
+
+    <!-- 📱 Mobile Menu Script -->
+    <script>
+      document.getElementById('menuBtn').addEventListener('click', () => {
+        document.getElementById('mobileMenu').classList.toggle('hidden');
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="sq">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xhamia Ebu Beker Es-Siddik</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/jpg" href="./assets/logo.jpg" />
+  </head>
+  <body class="bg-white text-gray-800">
+    <!-- 🌙 Header Navigation -->
+    <header class="bg-white shadow fixed w-full z-50">
+      <div
+        class="container mx-auto flex items-center justify-between px-6 py-4"
+      >
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-2">
+          <img src="./assets/logo.jpg" alt="Logo" class="h-10 w-auto" />
+          <span class="text-xl font-bold text-[#C49A3A]"
+            >Xhamia Ebu Beker Es-Siddik</span
+          >
+        </a>
+
+        <!-- Navigation -->
+        <nav class="hidden md:flex space-x-6 font-medium">
+          <a href="index.html" class="text-[#C49A3A] hover:text-[#009C9C]"
+            >Kreu</a
+          >
+          <a href="rreth-nesh.html" class="hover:text-[#009C9C]">Rreth nesh</a>
+          <a href="aktivitetet.html" class="hover:text-[#009C9C]"
+            >Aktivitetet</a
+          >
+          <a href="namazi.html" class="hover:text-[#009C9C]">Kohët e namazit</a>
+          <a href="eventet.html" class="hover:text-[#009C9C]">Eventet</a>
+          <a href="galeria.html" class="hover:text-[#009C9C]">Galeria</a>
+          <a href="dhurime.html" class="hover:text-[#009C9C]">Dhurime</a>
+          <a href="kontakt.html" class="hover:text-[#009C9C]">Kontakt</a>
+        </nav>
+
+        <!-- Language Switch -->
+        <div class="hidden md:flex items-center space-x-2">
+          <a
+            href="#"
+            class="px-2 py-1 border border-[#C49A3A] rounded hover:bg-[#C49A3A] hover:text-white"
+            >🇦🇱</a
+          >
+          <a
+            href="#"
+            class="px-2 py-1 border border-[#C49A3A] rounded hover:bg-[#C49A3A] hover:text-white"
+            >🇩🇪</a
+          >
+          <a
+            href="#"
+            class="px-2 py-1 border border-[#C49A3A] rounded hover:bg-[#C49A3A] hover:text-white"
+            >🇦🇪</a
+          >
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="menuBtn"
+          class="md:hidden text-[#C49A3A] focus:outline-none"
+        >
+          ☰
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden bg-white border-t border-gray-200 px-6 pb-4"
+      >
+        <nav class="flex flex-col space-y-3">
+          <a href="index.html" class="text-[#C49A3A]">Kreu</a>
+          <a href="rreth-nesh.html">Rreth nesh</a>
+          <a href="aktivitetet.html">Aktivitetet</a>
+          <a href="namazi.html">Kohët e namazit</a>
+          <a href="eventet.html">Eventet</a>
+          <a href="galeria.html">Galeria</a>
+          <a href="dhurime.html">Dhurime</a>
+          <a href="kontakt.html">Kontakt</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- 🕌 Hero Section -->
+    <section
+      class="relative h-screen flex items-center justify-center bg-[url('mosque-bg.jpg')] bg-cover bg-center"
+    >
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div class="relative text-center text-white px-6">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">
+          Mirë se vini në Xhaminë Ebu Beker Es-Siddik
+        </h1>
+        <p class="text-lg md:text-xl mb-6 max-w-2xl mx-auto">
+          Një vend për adhurim, bashkim dhe përkushtim ndaj dijes dhe
+          komunitetit.
+        </p>
+        <a
+          href="rreth-nesh.html"
+          class="px-6 py-3 bg-[#C49A3A] rounded hover:bg-[#009C9C] transition text-lg font-semibold"
+        >
+          Mëso më shumë
+        </a>
+      </div>
+    </section>
+
+    <!-- ✨ Sekcioni "Rreth Nesh" -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-[#C49A3A] mb-6">Rreth Nesh</h2>
+        <p class="max-w-3xl mx-auto text-lg text-gray-700 leading-relaxed">
+          Xhamia “Ebu Beker Es-Siddik” është ndërtuar me dashuri dhe përkushtim
+          për të shërbyer komunitetin tonë. Që nga themelimi, ne kemi qenë vend
+          adhurimi, edukimi dhe bashkëpunimi. Synimi ynë është të ruajmë vlerat
+          islame dhe t’i transmetojmë ato tek brezat e ardhshëm përmes
+          aktiviteteve fetare, edukative dhe sociale.
+        </p>
+        <a
+          href="rreth-nesh.html"
+          class="mt-8 inline-block px-6 py-3 bg-[#009C9C] text-white rounded hover:bg-[#C49A3A] transition"
+        >
+          Lexo më shumë
+        </a>
+      </div>
+    </section>
+
+    <!-- 🕌 Sekcioni Aktivitetet -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-[#C49A3A] mb-6">
+          Aktivitetet Kryesore
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8 mt-10">
+          <div
+            class="p-6 bg-gray-50 rounded-lg shadow hover:shadow-lg transition"
+          >
+            <h3 class="text-xl font-semibold mb-2">Mësime Kur’anore</h3>
+            <p class="text-gray-600">
+              Organizojmë mësime të rregullta për të gjitha moshat për të
+              përvetësuar leximin dhe kuptimin e Kur’anit.
+            </p>
+          </div>
+          <div
+            class="p-6 bg-gray-50 rounded-lg shadow hover:shadow-lg transition"
+          >
+            <h3 class="text-xl font-semibold mb-2">Ligjërata & Seminare</h3>
+            <p class="text-gray-600">
+              Çdo javë mbahen ligjërata mbi tema fetare dhe morale për të
+              forcuar dijen islame.
+            </p>
+          </div>
+          <div
+            class="p-6 bg-gray-50 rounded-lg shadow hover:shadow-lg transition"
+          >
+            <h3 class="text-xl font-semibold mb-2">Aktivitete për Rininë</h3>
+            <p class="text-gray-600">
+              Rinia është e ardhmja jonë – ndaj organizojmë programe edukative
+              dhe argëtuese për të rinjtë.
+            </p>
+          </div>
+        </div>
+        <a
+          href="aktivitetet.html"
+          class="mt-10 inline-block px-6 py-3 bg-[#009C9C] text-white rounded hover:bg-[#C49A3A] transition"
+        >
+          Shiko të gjitha aktivitetet
+        </a>
+      </div>
+    </section>
+
+    <!-- 📍 Footer -->
+    <footer class="bg-[#111] text-white py-10">
+      <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-3">Xhamia Ebu Beker Es-Siddik</h3>
+          <p>
+            Një vend për adhurim, dije dhe bashkim të komunitetit tonë musliman.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-3">Navigim</h4>
+          <ul class="space-y-2">
+            <li>
+              <a href="rreth-nesh.html" class="hover:text-[#C49A3A]"
+                >Rreth nesh</a
+              >
+            </li>
+            <li>
+              <a href="aktivitetet.html" class="hover:text-[#C49A3A]"
+                >Aktivitetet</a
+              >
+            </li>
+            <li>
+              <a href="namazi.html" class="hover:text-[#C49A3A]"
+                >Kohët e namazit</a
+              >
+            </li>
+            <li>
+              <a href="kontakt.html" class="hover:text-[#C49A3A]">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-3">Na kontaktoni</h4>
+          <p>Adresa: Rruga e Paqes 12, Prishtinë</p>
+          <p>Tel: +383 44 123 456</p>
+          <p>Email: info@xhamia-ebubeker.org</p>
+        </div>
+      </div>
+      <div class="text-center text-sm mt-10 border-t border-gray-700 pt-4">
+        &copy; 2025 Xhamia Ebu Beker Es-Siddik. Të gjitha të drejtat e
+        rezervuara.
+      </div>
+    </footer>
+
+    <!-- 📱 Mobile Menu Script -->
+    <script>
+      document.getElementById('menuBtn').addEventListener('click', () => {
+        document.getElementById('mobileMenu').classList.toggle('hidden');
+      });
+    </script>
+  </body>
+</html>
